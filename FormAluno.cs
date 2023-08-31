@@ -132,32 +132,116 @@ namespace projeto4
         {
             var con = new MySqlConnection(cs);
             con.Open();//estou abrindo o banco e posso dar inssertion e etc
+            var sql = "";
             if (!isAlteracao)
             {
-                var sql = "INSERT INTO aluno" + "(matricula, dt_nascimento, nome, endereco, bairro, cidade, estado, senha) VALUES (@matricula, @dt_nascimento, @nome, @endereco, @bairro, @cidade, @estado, @senha)";
-                var cmd = new MySqlCommand(sql, con);
-                DateTime.TryParse(mmtbDtNascimento.Text, out var dtNascimento);
-                cmd.Parameters.AddWithValue("@matricula", txtMatricula.Text);
-                cmd.Parameters.AddWithValue("@dt_nascimento", dtNascimento);
-                cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
-                cmd.Parameters.AddWithValue("@bairro", txtBairro.Text);
-                cmd.Parameters.AddWithValue("@cidade", txtCidade.Text);
-                cmd.Parameters.AddWithValue("@estado", cboEstado.Text);
-                cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
-                cmd.Prepare();
-                cmd.ExecuteNonQuery();
+                sql = "INSERT INTO aluno" + "(matricula, dt_nascimento, nome, endereco, bairro, cidade, estado, senha) VALUES (@matricula, @dt_nascimento, @nome, @endereco, @bairro, @cidade, @estado, @senha)";
+                
             }
             else
             {
-
+                sql = "UPDATE aluno SET " + "matricula = @matricula," + "dt_nascimento = @dt_nascimento," + "nome = @nome," + "endereco = @endereco," + "bairro = @bairro," + "cidade = @cidade," + "estado = @estado," + "senha = @senha" + " WHERE id = @id";
+                           
             }
+
+            var cmd = new MySqlCommand(sql, con);
+            DateTime.TryParse(mmtbDtNascimento.Text, out var dtNascimento);
+            cmd.Parameters.AddWithValue("@matricula", txtMatricula.Text);
+            cmd.Parameters.AddWithValue("@dt_nascimento", dtNascimento);
+            cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+            cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
+            cmd.Parameters.AddWithValue("@bairro", txtBairro.Text);
+            cmd.Parameters.AddWithValue("@cidade", txtCidade.Text);
+            cmd.Parameters.AddWithValue("@estado", cboEstado.Text);
+            cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
+
+            if (isAlteracao)
+                cmd.Parameters.AddWithValue("@id", txtId.Text);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
             limpaCampos();
         }
 
         private void tabPage2_Enter(object sender, EventArgs e)
         {
             CarregaGrid();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)//verifica se selecionou alguma linha
+            {
+                if(MessageBox.Show("Deseja realmente deletar?", "IFSP", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    var id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+                    Deletar(id);
+                    CarregaGrid();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Selecione algum aluno!", "IFSP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void Deletar (int id)
+        {
+            var con = new MySqlConnection(cs);
+            con.Open();
+            var sql = "DELETE FROM ALUNO WHERE id = @id";
+            var cmd = new MySqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Editar();
+        }
+
+        private void Editar()
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                isAlteracao= true;
+                var linha = dataGridView1.SelectedRows[0];
+                txtId.Text = linha.Cells["id"].Value.ToString();
+                txtMatricula.Text = linha.Cells["matricula"].Value.ToString();
+                mmtbDtNascimento.Text = linha.Cells["dt_nascimento"].Value.ToString();
+                txtNome.Text = linha.Cells["nome"].Value.ToString();
+                txtEndereco.Text = linha.Cells["endereco"].Value.ToString();
+                txtBairro.Text = linha.Cells["bairro"].Value.ToString();
+                cboEstado.Text = linha.Cells["estado"].Value.ToString();
+                txtCidade.Text = linha.Cells["cidade"].Value.ToString();
+                txtSenha.Text = linha.Cells["senha"].Value.ToString();
+                materialTabControl1.SelectedIndex = 0;
+                txtMatricula.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Selecione algum aluno!", "IFSP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            limpaCampos();
+            tabPage1.Show();
+            txtMatricula.Focus();
+
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            Editar();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpaCampos();
+            txtMatricula.Focus();
         }
     }
 }

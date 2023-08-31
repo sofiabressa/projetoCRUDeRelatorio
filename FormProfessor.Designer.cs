@@ -1,6 +1,6 @@
 ﻿namespace projeto4
 {
-    partial class FormAluno
+    partial class FormProfessor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAluno));
             this.materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cboTitulacao = new ReaLTaiizor.Controls.MaterialComboBox();
             this.txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            this.btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
             this.btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
+            this.btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
+            this.txtDataNascimento = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             this.cboEstado = new ReaLTaiizor.Controls.MaterialComboBox();
-            this.mmtbDtNascimento = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
-            this.txtSenha = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtCidade = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtBairro = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            this.txtAreaFormacao = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtEndereco = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtMatricula = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
@@ -48,7 +47,6 @@
             this.btnEditar = new ReaLTaiizor.Controls.MaterialButton();
             this.btnNovo = new ReaLTaiizor.Controls.MaterialButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -61,36 +59,63 @@
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialTabControl1.ImageList = this.imageList1;
             this.materialTabControl1.Location = new System.Drawing.Point(3, 64);
             this.materialTabControl1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(794, 393);
-            this.materialTabControl1.TabIndex = 9;
+            this.materialTabControl1.Size = new System.Drawing.Size(794, 383);
+            this.materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cboTitulacao);
             this.tabPage1.Controls.Add(this.txtId);
-            this.tabPage1.Controls.Add(this.btnSalvar);
             this.tabPage1.Controls.Add(this.btnCancelar);
+            this.tabPage1.Controls.Add(this.btnSalvar);
+            this.tabPage1.Controls.Add(this.txtDataNascimento);
             this.tabPage1.Controls.Add(this.cboEstado);
-            this.tabPage1.Controls.Add(this.mmtbDtNascimento);
-            this.tabPage1.Controls.Add(this.txtSenha);
             this.tabPage1.Controls.Add(this.txtCidade);
             this.tabPage1.Controls.Add(this.txtBairro);
+            this.tabPage1.Controls.Add(this.txtAreaFormacao);
             this.tabPage1.Controls.Add(this.txtEndereco);
             this.tabPage1.Controls.Add(this.txtNome);
             this.tabPage1.Controls.Add(this.txtMatricula);
-            this.tabPage1.ImageKey = "form.png";
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(786, 358);
+            this.tabPage1.Size = new System.Drawing.Size(786, 355);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cboTitulacao
+            // 
+            this.cboTitulacao.AutoResize = false;
+            this.cboTitulacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboTitulacao.Depth = 0;
+            this.cboTitulacao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboTitulacao.DropDownHeight = 174;
+            this.cboTitulacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTitulacao.DropDownWidth = 121;
+            this.cboTitulacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cboTitulacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cboTitulacao.FormattingEnabled = true;
+            this.cboTitulacao.Hint = "Titulação";
+            this.cboTitulacao.IntegralHeight = false;
+            this.cboTitulacao.ItemHeight = 43;
+            this.cboTitulacao.Items.AddRange(new object[] {
+            "Graduação",
+            "Especialização",
+            "Mestrado",
+            "Doutorado"});
+            this.cboTitulacao.Location = new System.Drawing.Point(646, 134);
+            this.cboTitulacao.MaxDropDownItems = 4;
+            this.cboTitulacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.cboTitulacao.Name = "cboTitulacao";
+            this.cboTitulacao.Size = new System.Drawing.Size(121, 49);
+            this.cboTitulacao.StartIndex = 0;
+            this.cboTitulacao.TabIndex = 12;
             // 
             // txtId
             // 
@@ -104,7 +129,7 @@
             this.txtId.HideSelection = true;
             this.txtId.Hint = "ID";
             this.txtId.LeadingIcon = null;
-            this.txtId.Location = new System.Drawing.Point(579, 103);
+            this.txtId.Location = new System.Drawing.Point(545, 211);
             this.txtId.MaxLength = 32767;
             this.txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtId.Name = "txtId";
@@ -116,33 +141,12 @@
             this.txtId.SelectionLength = 0;
             this.txtId.SelectionStart = 0;
             this.txtId.ShortcutsEnabled = true;
-            this.txtId.Size = new System.Drawing.Size(122, 48);
-            this.txtId.TabIndex = 10;
+            this.txtId.Size = new System.Drawing.Size(127, 48);
+            this.txtId.TabIndex = 11;
             this.txtId.TabStop = false;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtId.TrailingIcon = null;
             this.txtId.UseSystemPasswordChar = false;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSalvar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSalvar.Depth = 0;
-            this.btnSalvar.HighEmphasis = true;
-            this.btnSalvar.Icon = null;
-            this.btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnSalvar.Location = new System.Drawing.Point(703, 299);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSalvar.Size = new System.Drawing.Size(76, 36);
-            this.btnSalvar.TabIndex = 9;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSalvar.UseAccentColor = false;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -152,18 +156,81 @@
             this.btnCancelar.HighEmphasis = true;
             this.btnCancelar.Icon = null;
             this.btnCancelar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnCancelar.Location = new System.Drawing.Point(513, 299);
+            this.btnCancelar.Location = new System.Drawing.Point(458, 297);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCancelar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCancelar.Size = new System.Drawing.Size(96, 36);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(105, 36);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnCancelar.UseAccentColor = false;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.HighEmphasis = true;
+            this.btnSalvar.Icon = null;
+            this.btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            this.btnSalvar.Location = new System.Drawing.Point(670, 297);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSalvar.Size = new System.Drawing.Size(85, 36);
+            this.btnSalvar.TabIndex = 9;
+            this.btnSalvar.Text = "&Salvar";
+            this.btnSalvar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSalvar.UseAccentColor = false;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // txtDataNascimento
+            // 
+            this.txtDataNascimento.AllowPromptAsInput = true;
+            this.txtDataNascimento.AnimateReadOnly = false;
+            this.txtDataNascimento.AsciiOnly = false;
+            this.txtDataNascimento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtDataNascimento.BeepOnError = false;
+            this.txtDataNascimento.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtDataNascimento.Depth = 0;
+            this.txtDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDataNascimento.HidePromptOnLeave = false;
+            this.txtDataNascimento.HideSelection = true;
+            this.txtDataNascimento.Hint = "Data de nascimento";
+            this.txtDataNascimento.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.txtDataNascimento.LeadingIcon = null;
+            this.txtDataNascimento.Location = new System.Drawing.Point(458, 69);
+            this.txtDataNascimento.Mask = "99/99/9999";
+            this.txtDataNascimento.MaxLength = 32767;
+            this.txtDataNascimento.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.txtDataNascimento.Name = "txtDataNascimento";
+            this.txtDataNascimento.PasswordChar = '\0';
+            this.txtDataNascimento.PrefixSuffixText = null;
+            this.txtDataNascimento.PromptChar = '_';
+            this.txtDataNascimento.ReadOnly = false;
+            this.txtDataNascimento.RejectInputOnFirstFailure = false;
+            this.txtDataNascimento.ResetOnPrompt = true;
+            this.txtDataNascimento.ResetOnSpace = true;
+            this.txtDataNascimento.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDataNascimento.SelectedText = "";
+            this.txtDataNascimento.SelectionLength = 0;
+            this.txtDataNascimento.SelectionStart = 0;
+            this.txtDataNascimento.ShortcutsEnabled = true;
+            this.txtDataNascimento.Size = new System.Drawing.Size(309, 48);
+            this.txtDataNascimento.SkipLiterals = true;
+            this.txtDataNascimento.TabIndex = 8;
+            this.txtDataNascimento.TabStop = false;
+            this.txtDataNascimento.Text = "  /  /";
+            this.txtDataNascimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDataNascimento.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtDataNascimento.TrailingIcon = null;
+            this.txtDataNascimento.UseSystemPasswordChar = false;
+            this.txtDataNascimento.ValidatingType = null;
             // 
             // cboEstado
             // 
@@ -208,87 +275,13 @@
             "SP",
             "SE",
             "TO"});
-            this.cboEstado.Location = new System.Drawing.Point(580, 193);
+            this.cboEstado.Location = new System.Drawing.Point(458, 134);
             this.cboEstado.MaxDropDownItems = 4;
             this.cboEstado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(121, 49);
             this.cboEstado.StartIndex = 0;
             this.cboEstado.TabIndex = 7;
-            // 
-            // mmtbDtNascimento
-            // 
-            this.mmtbDtNascimento.AllowPromptAsInput = true;
-            this.mmtbDtNascimento.AnimateReadOnly = false;
-            this.mmtbDtNascimento.AsciiOnly = false;
-            this.mmtbDtNascimento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.mmtbDtNascimento.BeepOnError = false;
-            this.mmtbDtNascimento.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.mmtbDtNascimento.Depth = 0;
-            this.mmtbDtNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.mmtbDtNascimento.HidePromptOnLeave = false;
-            this.mmtbDtNascimento.HideSelection = true;
-            this.mmtbDtNascimento.Hint = "Data de nascimento";
-            this.mmtbDtNascimento.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.mmtbDtNascimento.LeadingIcon = null;
-            this.mmtbDtNascimento.Location = new System.Drawing.Point(513, 17);
-            this.mmtbDtNascimento.Mask = "99/99/9999";
-            this.mmtbDtNascimento.MaxLength = 32767;
-            this.mmtbDtNascimento.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.mmtbDtNascimento.Name = "mmtbDtNascimento";
-            this.mmtbDtNascimento.PasswordChar = '\0';
-            this.mmtbDtNascimento.PrefixSuffixText = null;
-            this.mmtbDtNascimento.PromptChar = '_';
-            this.mmtbDtNascimento.ReadOnly = false;
-            this.mmtbDtNascimento.RejectInputOnFirstFailure = false;
-            this.mmtbDtNascimento.ResetOnPrompt = true;
-            this.mmtbDtNascimento.ResetOnSpace = true;
-            this.mmtbDtNascimento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mmtbDtNascimento.SelectedText = "";
-            this.mmtbDtNascimento.SelectionLength = 0;
-            this.mmtbDtNascimento.SelectionStart = 0;
-            this.mmtbDtNascimento.ShortcutsEnabled = true;
-            this.mmtbDtNascimento.Size = new System.Drawing.Size(250, 48);
-            this.mmtbDtNascimento.SkipLiterals = true;
-            this.mmtbDtNascimento.TabIndex = 6;
-            this.mmtbDtNascimento.TabStop = false;
-            this.mmtbDtNascimento.Text = "  /  /";
-            this.mmtbDtNascimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.mmtbDtNascimento.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.mmtbDtNascimento.TrailingIcon = null;
-            this.mmtbDtNascimento.UseSystemPasswordChar = false;
-            this.mmtbDtNascimento.ValidatingType = null;
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.AnimateReadOnly = false;
-            this.txtSenha.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtSenha.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtSenha.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtSenha.Depth = 0;
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtSenha.HideSelection = true;
-            this.txtSenha.Hint = "Senha";
-            this.txtSenha.LeadingIcon = global::projeto4.Properties.Resources.baseline_fingerprint_black_24dp;
-            this.txtSenha.Location = new System.Drawing.Point(6, 287);
-            this.txtSenha.MaxLength = 32767;
-            this.txtSenha.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '●';
-            this.txtSenha.PrefixSuffixText = null;
-            this.txtSenha.ReadOnly = false;
-            this.txtSenha.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSenha.SelectedText = "";
-            this.txtSenha.SelectionLength = 0;
-            this.txtSenha.SelectionStart = 0;
-            this.txtSenha.ShortcutsEnabled = true;
-            this.txtSenha.Size = new System.Drawing.Size(471, 48);
-            this.txtSenha.TabIndex = 5;
-            this.txtSenha.TabStop = false;
-            this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtSenha.TrailingIcon = null;
-            this.txtSenha.UseSystemPasswordChar = false;
             // 
             // txtCidade
             // 
@@ -302,7 +295,7 @@
             this.txtCidade.HideSelection = true;
             this.txtCidade.Hint = "Cidade";
             this.txtCidade.LeadingIcon = null;
-            this.txtCidade.Location = new System.Drawing.Point(6, 233);
+            this.txtCidade.Location = new System.Drawing.Point(458, 15);
             this.txtCidade.MaxLength = 32767;
             this.txtCidade.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtCidade.Name = "txtCidade";
@@ -314,8 +307,8 @@
             this.txtCidade.SelectionLength = 0;
             this.txtCidade.SelectionStart = 0;
             this.txtCidade.ShortcutsEnabled = true;
-            this.txtCidade.Size = new System.Drawing.Size(471, 48);
-            this.txtCidade.TabIndex = 4;
+            this.txtCidade.Size = new System.Drawing.Size(309, 48);
+            this.txtCidade.TabIndex = 6;
             this.txtCidade.TabStop = false;
             this.txtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCidade.TrailingIcon = null;
@@ -333,7 +326,7 @@
             this.txtBairro.HideSelection = true;
             this.txtBairro.Hint = "Bairro";
             this.txtBairro.LeadingIcon = null;
-            this.txtBairro.Location = new System.Drawing.Point(6, 179);
+            this.txtBairro.Location = new System.Drawing.Point(3, 274);
             this.txtBairro.MaxLength = 32767;
             this.txtBairro.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtBairro.Name = "txtBairro";
@@ -345,12 +338,43 @@
             this.txtBairro.SelectionLength = 0;
             this.txtBairro.SelectionStart = 0;
             this.txtBairro.ShortcutsEnabled = true;
-            this.txtBairro.Size = new System.Drawing.Size(471, 48);
-            this.txtBairro.TabIndex = 3;
+            this.txtBairro.Size = new System.Drawing.Size(406, 48);
+            this.txtBairro.TabIndex = 5;
             this.txtBairro.TabStop = false;
             this.txtBairro.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBairro.TrailingIcon = null;
             this.txtBairro.UseSystemPasswordChar = false;
+            // 
+            // txtAreaFormacao
+            // 
+            this.txtAreaFormacao.AnimateReadOnly = false;
+            this.txtAreaFormacao.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtAreaFormacao.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtAreaFormacao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtAreaFormacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtAreaFormacao.Depth = 0;
+            this.txtAreaFormacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAreaFormacao.HideSelection = true;
+            this.txtAreaFormacao.Hint = "Área de formação";
+            this.txtAreaFormacao.LeadingIcon = null;
+            this.txtAreaFormacao.Location = new System.Drawing.Point(6, 145);
+            this.txtAreaFormacao.MaxLength = 32767;
+            this.txtAreaFormacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.txtAreaFormacao.Name = "txtAreaFormacao";
+            this.txtAreaFormacao.PasswordChar = '\0';
+            this.txtAreaFormacao.PrefixSuffixText = null;
+            this.txtAreaFormacao.ReadOnly = false;
+            this.txtAreaFormacao.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtAreaFormacao.SelectedText = "";
+            this.txtAreaFormacao.SelectionLength = 0;
+            this.txtAreaFormacao.SelectionStart = 0;
+            this.txtAreaFormacao.ShortcutsEnabled = true;
+            this.txtAreaFormacao.Size = new System.Drawing.Size(406, 48);
+            this.txtAreaFormacao.TabIndex = 4;
+            this.txtAreaFormacao.TabStop = false;
+            this.txtAreaFormacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAreaFormacao.TrailingIcon = null;
+            this.txtAreaFormacao.UseSystemPasswordChar = false;
             // 
             // txtEndereco
             // 
@@ -364,7 +388,7 @@
             this.txtEndereco.HideSelection = true;
             this.txtEndereco.Hint = "Endereço";
             this.txtEndereco.LeadingIcon = null;
-            this.txtEndereco.Location = new System.Drawing.Point(6, 125);
+            this.txtEndereco.Location = new System.Drawing.Point(3, 211);
             this.txtEndereco.MaxLength = 32767;
             this.txtEndereco.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtEndereco.Name = "txtEndereco";
@@ -376,8 +400,8 @@
             this.txtEndereco.SelectionLength = 0;
             this.txtEndereco.SelectionStart = 0;
             this.txtEndereco.ShortcutsEnabled = true;
-            this.txtEndereco.Size = new System.Drawing.Size(471, 48);
-            this.txtEndereco.TabIndex = 2;
+            this.txtEndereco.Size = new System.Drawing.Size(406, 48);
+            this.txtEndereco.TabIndex = 3;
             this.txtEndereco.TabStop = false;
             this.txtEndereco.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEndereco.TrailingIcon = null;
@@ -395,7 +419,7 @@
             this.txtNome.HideSelection = true;
             this.txtNome.Hint = "Nome";
             this.txtNome.LeadingIcon = null;
-            this.txtNome.Location = new System.Drawing.Point(6, 71);
+            this.txtNome.Location = new System.Drawing.Point(6, 80);
             this.txtNome.MaxLength = 32767;
             this.txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtNome.Name = "txtNome";
@@ -407,7 +431,7 @@
             this.txtNome.SelectionLength = 0;
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
-            this.txtNome.Size = new System.Drawing.Size(471, 48);
+            this.txtNome.Size = new System.Drawing.Size(406, 48);
             this.txtNome.TabIndex = 1;
             this.txtNome.TabStop = false;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -426,7 +450,7 @@
             this.txtMatricula.HideSelection = true;
             this.txtMatricula.Hint = "Matrícula";
             this.txtMatricula.LeadingIcon = null;
-            this.txtMatricula.Location = new System.Drawing.Point(6, 17);
+            this.txtMatricula.Location = new System.Drawing.Point(6, 15);
             this.txtMatricula.MaxLength = 32767;
             this.txtMatricula.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtMatricula.Name = "txtMatricula";
@@ -438,7 +462,7 @@
             this.txtMatricula.SelectionLength = 0;
             this.txtMatricula.SelectionStart = 0;
             this.txtMatricula.ShortcutsEnabled = true;
-            this.txtMatricula.Size = new System.Drawing.Size(471, 48);
+            this.txtMatricula.Size = new System.Drawing.Size(406, 48);
             this.txtMatricula.TabIndex = 0;
             this.txtMatricula.TabStop = false;
             this.txtMatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -451,15 +475,13 @@
             this.tabPage2.Controls.Add(this.btnEditar);
             this.tabPage2.Controls.Add(this.btnNovo);
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.ImageKey = "search.png";
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(786, 358);
+            this.tabPage2.Size = new System.Drawing.Size(786, 355);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
             // btnExcluir
             // 
@@ -480,7 +502,6 @@
             this.btnExcluir.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnExcluir.UseAccentColor = false;
             this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -490,7 +511,7 @@
             this.btnEditar.HighEmphasis = true;
             this.btnEditar.Icon = null;
             this.btnEditar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnEditar.Location = new System.Drawing.Point(586, 313);
+            this.btnEditar.Location = new System.Drawing.Point(591, 313);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEditar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnEditar.Name = "btnEditar";
@@ -501,7 +522,6 @@
             this.btnEditar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditar.UseAccentColor = false;
             this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNovo
             // 
@@ -511,54 +531,38 @@
             this.btnNovo.HighEmphasis = true;
             this.btnNovo.Icon = null;
             this.btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnNovo.Location = new System.Drawing.Point(500, 313);
+            this.btnNovo.Location = new System.Drawing.Point(501, 313);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnNovo.Size = new System.Drawing.Size(64, 36);
+            this.btnNovo.Size = new System.Drawing.Size(71, 36);
             this.btnNovo.TabIndex = 1;
-            this.btnNovo.Text = "Novo";
+            this.btnNovo.Text = "&Novo";
             this.btnNovo.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnNovo.UseAccentColor = false;
             this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 0);
-            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(783, 290);
+            this.dataGridView1.Size = new System.Drawing.Size(786, 284);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "logo.png");
-            this.imageList1.Images.SetKeyName(1, "search.png");
-            this.imageList1.Images.SetKeyName(2, "form.png");
-            // 
-            // FormAluno
+            // FormProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.materialTabControl1);
             this.DrawerTabControl = this.materialTabControl1;
-            this.Name = "FormAluno";
+            this.Name = "FormProfessor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Aluno";
-            this.Load += new System.EventHandler(this.FormAluno_Load);
+            this.Text = "Professor";
+            this.Load += new System.EventHandler(this.FormProfessor_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -573,22 +577,22 @@
 
         private ReaLTaiizor.Controls.MaterialTabControl materialTabControl1;
         private TabPage tabPage1;
-        private ReaLTaiizor.Controls.MaterialButton btnSalvar;
-        private ReaLTaiizor.Controls.MaterialButton btnCancelar;
-        private ReaLTaiizor.Controls.MaterialComboBox cboEstado;
-        private ReaLTaiizor.Controls.MaterialMaskedTextBox mmtbDtNascimento;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtSenha;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtCidade;
+        private TabPage tabPage2;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtBairro;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtAreaFormacao;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtEndereco;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNome;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtMatricula;
-        private TabPage tabPage2;
-        private ImageList imageList1;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtCidade;
+        private ReaLTaiizor.Controls.MaterialComboBox cboEstado;
+        private ReaLTaiizor.Controls.MaterialMaskedTextBox txtDataNascimento;
+        private ReaLTaiizor.Controls.MaterialButton btnCancelar;
+        private ReaLTaiizor.Controls.MaterialButton btnSalvar;
         private DataGridView dataGridView1;
         private ReaLTaiizor.Controls.MaterialButton btnExcluir;
         private ReaLTaiizor.Controls.MaterialButton btnEditar;
         private ReaLTaiizor.Controls.MaterialButton btnNovo;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
+        private ReaLTaiizor.Controls.MaterialComboBox cboTitulacao;
     }
 }
