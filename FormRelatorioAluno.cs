@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -97,6 +98,17 @@ namespace projeto4
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             MontaRelatorio();
+        }
+
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            MontaRelatorio();
+            var p = new Process();
+            p.StartInfo = new ProcessStartInfo(@"RelatorioAlunos.pdf")
+            {
+                UseShellExecute = true
+            };
+            p.Start();
         }
     }
 }
