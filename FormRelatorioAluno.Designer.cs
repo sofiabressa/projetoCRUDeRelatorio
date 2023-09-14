@@ -100,6 +100,7 @@
             this.cboEstado.IntegralHeight = false;
             this.cboEstado.ItemHeight = 43;
             this.cboEstado.Items.AddRange(new object[] {
+            "",
             "AC",
             "AL",
             "AP",
@@ -220,6 +221,7 @@
             this.btnImprimir.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnImprimir.UseAccentColor = false;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnVisualizar
             // 
