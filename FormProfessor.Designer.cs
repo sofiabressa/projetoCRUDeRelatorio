@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProfessor));
             this.materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cboTitulacao = new ReaLTaiizor.Controls.MaterialComboBox();
@@ -47,6 +49,7 @@
             this.btnEditar = new ReaLTaiizor.Controls.MaterialButton();
             this.btnNovo = new ReaLTaiizor.Controls.MaterialButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -59,12 +62,13 @@
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialTabControl1.ImageList = this.imageList1;
             this.materialTabControl1.Location = new System.Drawing.Point(3, 64);
             this.materialTabControl1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(794, 383);
+            this.materialTabControl1.Size = new System.Drawing.Size(671, 409);
             this.materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -81,10 +85,11 @@
             this.tabPage1.Controls.Add(this.txtEndereco);
             this.tabPage1.Controls.Add(this.txtNome);
             this.tabPage1.Controls.Add(this.txtMatricula);
+            this.tabPage1.ImageKey = "form.png";
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(786, 355);
+            this.tabPage1.Size = new System.Drawing.Size(663, 381);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -109,13 +114,13 @@
             "Especialização",
             "Mestrado",
             "Doutorado"});
-            this.cboTitulacao.Location = new System.Drawing.Point(646, 134);
+            this.cboTitulacao.Location = new System.Drawing.Point(518, 24);
             this.cboTitulacao.MaxDropDownItems = 4;
             this.cboTitulacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.cboTitulacao.Name = "cboTitulacao";
-            this.cboTitulacao.Size = new System.Drawing.Size(121, 49);
+            this.cboTitulacao.Size = new System.Drawing.Size(130, 49);
             this.cboTitulacao.StartIndex = 0;
-            this.cboTitulacao.TabIndex = 12;
+            this.cboTitulacao.TabIndex = 8;
             // 
             // txtId
             // 
@@ -129,7 +134,7 @@
             this.txtId.HideSelection = true;
             this.txtId.Hint = "ID";
             this.txtId.LeadingIcon = null;
-            this.txtId.Location = new System.Drawing.Point(545, 211);
+            this.txtId.Location = new System.Drawing.Point(429, 87);
             this.txtId.MaxLength = 32767;
             this.txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtId.Name = "txtId";
@@ -141,8 +146,8 @@
             this.txtId.SelectionLength = 0;
             this.txtId.SelectionStart = 0;
             this.txtId.ShortcutsEnabled = true;
-            this.txtId.Size = new System.Drawing.Size(127, 48);
-            this.txtId.TabIndex = 11;
+            this.txtId.Size = new System.Drawing.Size(83, 48);
+            this.txtId.TabIndex = 100;
             this.txtId.TabStop = false;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtId.TrailingIcon = null;
@@ -156,7 +161,7 @@
             this.btnCancelar.HighEmphasis = true;
             this.btnCancelar.Icon = null;
             this.btnCancelar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnCancelar.Location = new System.Drawing.Point(458, 297);
+            this.btnCancelar.Location = new System.Drawing.Point(231, 310);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCancelar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
@@ -176,7 +181,7 @@
             this.btnSalvar.HighEmphasis = true;
             this.btnSalvar.Icon = null;
             this.btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnSalvar.Location = new System.Drawing.Point(670, 297);
+            this.btnSalvar.Location = new System.Drawing.Point(344, 310);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnSalvar.Name = "btnSalvar";
@@ -187,7 +192,6 @@
             this.btnSalvar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSalvar.UseAccentColor = false;
             this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtDataNascimento
             // 
@@ -204,7 +208,7 @@
             this.txtDataNascimento.Hint = "Data de nascimento";
             this.txtDataNascimento.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtDataNascimento.LeadingIcon = null;
-            this.txtDataNascimento.Location = new System.Drawing.Point(458, 69);
+            this.txtDataNascimento.Location = new System.Drawing.Point(518, 87);
             this.txtDataNascimento.Mask = "99/99/9999";
             this.txtDataNascimento.MaxLength = 32767;
             this.txtDataNascimento.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -221,9 +225,9 @@
             this.txtDataNascimento.SelectionLength = 0;
             this.txtDataNascimento.SelectionStart = 0;
             this.txtDataNascimento.ShortcutsEnabled = true;
-            this.txtDataNascimento.Size = new System.Drawing.Size(309, 48);
+            this.txtDataNascimento.Size = new System.Drawing.Size(130, 48);
             this.txtDataNascimento.SkipLiterals = true;
-            this.txtDataNascimento.TabIndex = 8;
+            this.txtDataNascimento.TabIndex = 2;
             this.txtDataNascimento.TabStop = false;
             this.txtDataNascimento.Text = "  /  /";
             this.txtDataNascimento.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -275,13 +279,13 @@
             "SP",
             "SE",
             "TO"});
-            this.cboEstado.Location = new System.Drawing.Point(458, 134);
+            this.cboEstado.Location = new System.Drawing.Point(429, 215);
             this.cboEstado.MaxDropDownItems = 4;
             this.cboEstado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(121, 49);
+            this.cboEstado.Size = new System.Drawing.Size(69, 49);
             this.cboEstado.StartIndex = 0;
-            this.cboEstado.TabIndex = 7;
+            this.cboEstado.TabIndex = 6;
             // 
             // txtCidade
             // 
@@ -295,7 +299,7 @@
             this.txtCidade.HideSelection = true;
             this.txtCidade.Hint = "Cidade";
             this.txtCidade.LeadingIcon = null;
-            this.txtCidade.Location = new System.Drawing.Point(458, 15);
+            this.txtCidade.Location = new System.Drawing.Point(30, 215);
             this.txtCidade.MaxLength = 32767;
             this.txtCidade.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtCidade.Name = "txtCidade";
@@ -307,8 +311,8 @@
             this.txtCidade.SelectionLength = 0;
             this.txtCidade.SelectionStart = 0;
             this.txtCidade.ShortcutsEnabled = true;
-            this.txtCidade.Size = new System.Drawing.Size(309, 48);
-            this.txtCidade.TabIndex = 6;
+            this.txtCidade.Size = new System.Drawing.Size(392, 48);
+            this.txtCidade.TabIndex = 4;
             this.txtCidade.TabStop = false;
             this.txtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCidade.TrailingIcon = null;
@@ -326,7 +330,7 @@
             this.txtBairro.HideSelection = true;
             this.txtBairro.Hint = "Bairro";
             this.txtBairro.LeadingIcon = null;
-            this.txtBairro.Location = new System.Drawing.Point(3, 274);
+            this.txtBairro.Location = new System.Drawing.Point(429, 151);
             this.txtBairro.MaxLength = 32767;
             this.txtBairro.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtBairro.Name = "txtBairro";
@@ -338,7 +342,7 @@
             this.txtBairro.SelectionLength = 0;
             this.txtBairro.SelectionStart = 0;
             this.txtBairro.ShortcutsEnabled = true;
-            this.txtBairro.Size = new System.Drawing.Size(406, 48);
+            this.txtBairro.Size = new System.Drawing.Size(219, 48);
             this.txtBairro.TabIndex = 5;
             this.txtBairro.TabStop = false;
             this.txtBairro.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -357,7 +361,7 @@
             this.txtAreaFormacao.HideSelection = true;
             this.txtAreaFormacao.Hint = "Área de formação";
             this.txtAreaFormacao.LeadingIcon = null;
-            this.txtAreaFormacao.Location = new System.Drawing.Point(6, 145);
+            this.txtAreaFormacao.Location = new System.Drawing.Point(344, 24);
             this.txtAreaFormacao.MaxLength = 32767;
             this.txtAreaFormacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtAreaFormacao.Name = "txtAreaFormacao";
@@ -369,8 +373,8 @@
             this.txtAreaFormacao.SelectionLength = 0;
             this.txtAreaFormacao.SelectionStart = 0;
             this.txtAreaFormacao.ShortcutsEnabled = true;
-            this.txtAreaFormacao.Size = new System.Drawing.Size(406, 48);
-            this.txtAreaFormacao.TabIndex = 4;
+            this.txtAreaFormacao.Size = new System.Drawing.Size(169, 48);
+            this.txtAreaFormacao.TabIndex = 7;
             this.txtAreaFormacao.TabStop = false;
             this.txtAreaFormacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAreaFormacao.TrailingIcon = null;
@@ -388,7 +392,7 @@
             this.txtEndereco.HideSelection = true;
             this.txtEndereco.Hint = "Endereço";
             this.txtEndereco.LeadingIcon = null;
-            this.txtEndereco.Location = new System.Drawing.Point(3, 211);
+            this.txtEndereco.Location = new System.Drawing.Point(30, 151);
             this.txtEndereco.MaxLength = 32767;
             this.txtEndereco.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtEndereco.Name = "txtEndereco";
@@ -400,7 +404,7 @@
             this.txtEndereco.SelectionLength = 0;
             this.txtEndereco.SelectionStart = 0;
             this.txtEndereco.ShortcutsEnabled = true;
-            this.txtEndereco.Size = new System.Drawing.Size(406, 48);
+            this.txtEndereco.Size = new System.Drawing.Size(392, 48);
             this.txtEndereco.TabIndex = 3;
             this.txtEndereco.TabStop = false;
             this.txtEndereco.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -419,7 +423,7 @@
             this.txtNome.HideSelection = true;
             this.txtNome.Hint = "Nome";
             this.txtNome.LeadingIcon = null;
-            this.txtNome.Location = new System.Drawing.Point(6, 80);
+            this.txtNome.Location = new System.Drawing.Point(30, 87);
             this.txtNome.MaxLength = 32767;
             this.txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtNome.Name = "txtNome";
@@ -431,7 +435,7 @@
             this.txtNome.SelectionLength = 0;
             this.txtNome.SelectionStart = 0;
             this.txtNome.ShortcutsEnabled = true;
-            this.txtNome.Size = new System.Drawing.Size(406, 48);
+            this.txtNome.Size = new System.Drawing.Size(392, 48);
             this.txtNome.TabIndex = 1;
             this.txtNome.TabStop = false;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -450,7 +454,7 @@
             this.txtMatricula.HideSelection = true;
             this.txtMatricula.Hint = "Matrícula";
             this.txtMatricula.LeadingIcon = null;
-            this.txtMatricula.Location = new System.Drawing.Point(6, 15);
+            this.txtMatricula.Location = new System.Drawing.Point(30, 24);
             this.txtMatricula.MaxLength = 32767;
             this.txtMatricula.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.txtMatricula.Name = "txtMatricula";
@@ -462,7 +466,7 @@
             this.txtMatricula.SelectionLength = 0;
             this.txtMatricula.SelectionStart = 0;
             this.txtMatricula.ShortcutsEnabled = true;
-            this.txtMatricula.Size = new System.Drawing.Size(406, 48);
+            this.txtMatricula.Size = new System.Drawing.Size(308, 48);
             this.txtMatricula.TabIndex = 0;
             this.txtMatricula.TabStop = false;
             this.txtMatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -475,10 +479,11 @@
             this.tabPage2.Controls.Add(this.btnEditar);
             this.tabPage2.Controls.Add(this.btnNovo);
             this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.ImageKey = "search.png";
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(786, 355);
+            this.tabPage2.Size = new System.Drawing.Size(802, 317);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -491,7 +496,7 @@
             this.btnExcluir.HighEmphasis = true;
             this.btnExcluir.Icon = null;
             this.btnExcluir.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnExcluir.Location = new System.Drawing.Point(690, 313);
+            this.btnExcluir.Location = new System.Drawing.Point(713, 306);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnExcluir.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnExcluir.Name = "btnExcluir";
@@ -511,7 +516,7 @@
             this.btnEditar.HighEmphasis = true;
             this.btnEditar.Icon = null;
             this.btnEditar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnEditar.Location = new System.Drawing.Point(591, 313);
+            this.btnEditar.Location = new System.Drawing.Point(615, 306);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEditar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnEditar.Name = "btnEditar";
@@ -531,7 +536,7 @@
             this.btnNovo.HighEmphasis = true;
             this.btnNovo.Icon = null;
             this.btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnNovo.Location = new System.Drawing.Point(501, 313);
+            this.btnNovo.Location = new System.Drawing.Point(523, 306);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnNovo.Name = "btnNovo";
@@ -545,24 +550,36 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(786, 284);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "search.png");
+            this.imageList1.Images.SetKeyName(1, "form.png");
             // 
             // FormProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(677, 476);
             this.Controls.Add(this.materialTabControl1);
             this.DrawerTabControl = this.materialTabControl1;
             this.Name = "FormProfessor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Professor";
-            this.Load += new System.EventHandler(this.FormProfessor_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -594,5 +611,6 @@
         private ReaLTaiizor.Controls.MaterialButton btnNovo;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
         private ReaLTaiizor.Controls.MaterialComboBox cboTitulacao;
+        private ImageList imageList1;
     }
 }

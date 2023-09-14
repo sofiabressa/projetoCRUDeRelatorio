@@ -87,7 +87,7 @@ namespace projeto4
                 Salvar();
                 materialTabControl1.SelectedIndex = 1;
             }
-            
+
         }
 
         private void limpaCampos()
@@ -125,7 +125,7 @@ namespace projeto4
             var dt = new DataTable();
             sqlAd.Fill(dt);
             dataGridView1.DataSource = dt;
-            
+
         }
 
         private void Salvar()
@@ -136,12 +136,12 @@ namespace projeto4
             if (!isAlteracao)
             {
                 sql = "INSERT INTO aluno" + "(matricula, dt_nascimento, nome, endereco, bairro, cidade, estado, senha) VALUES (@matricula, @dt_nascimento, @nome, @endereco, @bairro, @cidade, @estado, @senha)";
-                
+
             }
             else
             {
                 sql = "UPDATE aluno SET " + "matricula = @matricula," + "dt_nascimento = @dt_nascimento," + "nome = @nome," + "endereco = @endereco," + "bairro = @bairro," + "cidade = @cidade," + "estado = @estado," + "senha = @senha" + " WHERE id = @id";
-                           
+
             }
 
             var cmd = new MySqlCommand(sql, con);
@@ -169,9 +169,9 @@ namespace projeto4
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count > 0)//verifica se selecionou alguma linha
+            if (dataGridView1.SelectedRows.Count > 0)//verifica se selecionou alguma linha
             {
-                if(MessageBox.Show("Deseja realmente deletar?", "IFSP", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja realmente deletar?", "IFSP", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     var id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
                     Deletar(id);
@@ -185,7 +185,7 @@ namespace projeto4
             }
         }
 
-        private void Deletar (int id)
+        private void Deletar(int id)
         {
             var con = new MySqlConnection(cs);
             con.Open();
@@ -203,9 +203,9 @@ namespace projeto4
 
         private void Editar()
         {
-            if(dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                isAlteracao= true;
+                isAlteracao = true;
                 var linha = dataGridView1.SelectedRows[0];
                 txtId.Text = linha.Cells["id"].Value.ToString();
                 txtMatricula.Text = linha.Cells["matricula"].Value.ToString();
