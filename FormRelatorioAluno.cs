@@ -100,7 +100,7 @@ namespace projeto4
             if (cboImpressora.Text != "")
             {
                 PdfDocument doc = new PdfDocument();
-                doc.LoadFromFile("RelatoriosProfessores.pdf");
+                doc.LoadFromFile("RelatorioAlunos.pdf");
 
                 //configs da impressora
                 doc.PrintSettings.PrinterName = cboImpressora.Text;

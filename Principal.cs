@@ -43,7 +43,6 @@ namespace projeto4
             formCurso.Show();
         }
 
-
         private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
