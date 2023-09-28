@@ -210,7 +210,7 @@
             this.btnImprimir.HighEmphasis = true;
             this.btnImprimir.Icon = null;
             this.btnImprimir.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnImprimir.Location = new System.Drawing.Point(151, 467);
+            this.btnImprimir.Location = new System.Drawing.Point(151, 458);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnImprimir.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnImprimir.Name = "btnImprimir";
@@ -231,7 +231,7 @@
             this.btnVisualizar.HighEmphasis = true;
             this.btnVisualizar.Icon = null;
             this.btnVisualizar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnVisualizar.Location = new System.Drawing.Point(246, 467);
+            this.btnVisualizar.Location = new System.Drawing.Point(246, 458);
             this.btnVisualizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnVisualizar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnVisualizar.Name = "btnVisualizar";
