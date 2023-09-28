@@ -74,18 +74,21 @@
             this.cadastroDeAlunoToolStripMenuItem.Name = "cadastroDeAlunoToolStripMenuItem";
             this.cadastroDeAlunoToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.cadastroDeAlunoToolStripMenuItem.Text = "Cadastro de Aluno";
+            this.cadastroDeAlunoToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeAlunoToolStripMenuItem_Click);
             // 
             // cadastroDeProfessorToolStripMenuItem
             // 
             this.cadastroDeProfessorToolStripMenuItem.Name = "cadastroDeProfessorToolStripMenuItem";
             this.cadastroDeProfessorToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.cadastroDeProfessorToolStripMenuItem.Text = "Cadastro de Professor";
+            this.cadastroDeProfessorToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeProfessorToolStripMenuItem_Click);
             // 
             // cadastroCursoToolStripMenuItem
             // 
             this.cadastroCursoToolStripMenuItem.Name = "cadastroCursoToolStripMenuItem";
             this.cadastroCursoToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.cadastroCursoToolStripMenuItem.Text = "Cadastro Curso";
+            this.cadastroCursoToolStripMenuItem.Click += new System.EventHandler(this.cadastroCursoToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -100,20 +103,23 @@
             // alunosToolStripMenuItem
             // 
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
-            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alunosToolStripMenuItem.Text = "Alunos";
+            this.alunosToolStripMenuItem.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
             // 
             // professoresToolStripMenuItem
             // 
             this.professoresToolStripMenuItem.Name = "professoresToolStripMenuItem";
-            this.professoresToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.professoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.professoresToolStripMenuItem.Text = "Professores";
+            this.professoresToolStripMenuItem.Click += new System.EventHandler(this.professoresToolStripMenuItem_Click);
             // 
             // cursosToolStripMenuItem
             // 
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cursosToolStripMenuItem.Text = "Cursos";
+            this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
             // Principal
             // 

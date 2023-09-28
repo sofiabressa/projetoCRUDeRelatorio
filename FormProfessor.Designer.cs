@@ -68,7 +68,7 @@
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(671, 409);
+            this.materialTabControl1.Size = new System.Drawing.Size(684, 409);
             this.materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -89,7 +89,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(663, 381);
+            this.tabPage1.Size = new System.Drawing.Size(676, 381);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -285,7 +285,7 @@
             this.cboEstado.MaxDropDownItems = 4;
             this.cboEstado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(69, 49);
+            this.cboEstado.Size = new System.Drawing.Size(219, 49);
             this.cboEstado.StartIndex = 0;
             this.cboEstado.TabIndex = 6;
             // 
@@ -485,10 +485,11 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(663, 381);
+            this.tabPage2.Size = new System.Drawing.Size(676, 381);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
             // btnExcluir
             // 
@@ -498,7 +499,7 @@
             this.btnExcluir.HighEmphasis = true;
             this.btnExcluir.Icon = null;
             this.btnExcluir.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnExcluir.Location = new System.Drawing.Point(713, 306);
+            this.btnExcluir.Location = new System.Drawing.Point(397, 317);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnExcluir.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnExcluir.Name = "btnExcluir";
@@ -509,6 +510,7 @@
             this.btnExcluir.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnExcluir.UseAccentColor = false;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -518,7 +520,7 @@
             this.btnEditar.HighEmphasis = true;
             this.btnEditar.Icon = null;
             this.btnEditar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnEditar.Location = new System.Drawing.Point(615, 306);
+            this.btnEditar.Location = new System.Drawing.Point(308, 317);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEditar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnEditar.Name = "btnEditar";
@@ -529,6 +531,7 @@
             this.btnEditar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditar.UseAccentColor = false;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNovo
             // 
@@ -538,7 +541,7 @@
             this.btnNovo.HighEmphasis = true;
             this.btnNovo.Icon = null;
             this.btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnNovo.Location = new System.Drawing.Point(523, 306);
+            this.btnNovo.Location = new System.Drawing.Point(229, 317);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnNovo.Name = "btnNovo";
@@ -549,6 +552,7 @@
             this.btnNovo.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnNovo.UseAccentColor = false;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // dataGridView1
             // 
@@ -561,7 +565,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(786, 284);
+            this.dataGridView1.Size = new System.Drawing.Size(676, 284);
             this.dataGridView1.TabIndex = 0;
             // 
             // imageList1
@@ -576,12 +580,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 476);
+            this.ClientSize = new System.Drawing.Size(690, 476);
             this.Controls.Add(this.materialTabControl1);
             this.DrawerTabControl = this.materialTabControl1;
             this.Name = "FormProfessor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Professor";
+            this.Text = "Cadastro Professor";
+            this.Load += new System.EventHandler(this.FormProfessor_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

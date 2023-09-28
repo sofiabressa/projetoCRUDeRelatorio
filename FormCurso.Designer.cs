@@ -64,6 +64,7 @@
             this.materialTabControl1.SelectedIndex = 0;
             this.materialTabControl1.Size = new System.Drawing.Size(438, 290);
             this.materialTabControl1.TabIndex = 0;
+            this.materialTabControl1.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
             // tabPage1
             // 
@@ -279,6 +280,7 @@
             this.btnExcluir.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnExcluir.UseAccentColor = false;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -299,6 +301,7 @@
             this.btnEditar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditar.UseAccentColor = false;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNovo
             // 
@@ -319,6 +322,7 @@
             this.btnNovo.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnNovo.UseAccentColor = false;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // dataGridView1
             // 
@@ -353,7 +357,7 @@
             this.DrawerTabControl = this.materialTabControl1;
             this.Name = "FormCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Curso";
+            this.Text = "Cadastro de Curso";
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

@@ -49,7 +49,7 @@ namespace projeto4
             if (cboEstado.Text != "")
                 sqlAd.SelectCommand.Parameters.AddWithValue("@estado", cboEstado.Text);
             if (txtCidade.Text != "")
-                sqlAd.SelectCommand.Parameters.AddWithValue("@estado", txtCidade.Text);
+                sqlAd.SelectCommand.Parameters.AddWithValue("@cidade", txtCidade.Text);
 
             var dt = new DataTable();
             sqlAd.Fill(dt);

@@ -255,6 +255,7 @@
             this.Controls.Add(this.gpb2);
             this.Controls.Add(this.gpb1);
             this.Name = "FormRelatorioAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório de Alunos";
             this.gpb1.ResumeLayout(false);
             this.gpb2.ResumeLayout(false);
