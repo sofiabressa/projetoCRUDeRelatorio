@@ -43,7 +43,7 @@ namespace projeto4
             formCurso.Show();
         }
 
-        
+
         private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -54,6 +54,20 @@ namespace projeto4
             var formRelAluno = new FormRelatorioAluno();
             formRelAluno.MdiParent = this;
             formRelAluno.Show();
+        }
+
+        private void professoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formRelProf = new FormRelatorioProfessor();
+            formRelProf.MdiParent = this;
+            formRelProf.Show();
+        }
+
+        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formRelCurso = new FormRelatorioCurso();
+            formRelCurso.MdiParent = this;
+            formRelCurso.Show();
         }
     }
 }
